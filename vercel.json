@@ -3,7 +3,11 @@
   "rewrites": [
     { "source": "/", "destination": "/app-web/publico/landing/pagina.html" },
     { "source": "/estilos/:path*", "destination": "/app-web/estilos/:path*" },
-    { "source": "/landing/:path*", "destination": "/app-web/publico/landing/:path*" }
+    { "source": "/landing/:path*", "destination": "/app-web/publico/landing/:path*" },
+    { "source": "/legal/:path*", "destination": "/app-web/publico/termos/:path*" },
+    { "source": "/termos", "destination": "/app-web/publico/termos/termos-de-uso.html" },
+    { "source": "/privacidade", "destination": "/app-web/publico/termos/privacidade.html" },
+    { "source": "/reembolso", "destination": "/app-web/publico/termos/reembolso.html" }
   ],
   "headers": [
     {
@@ -15,7 +19,7 @@
       ]
     },
     {
-      "source": "/(estilos|landing)/(.*)",
+      "source": "/(estilos|landing|legal)/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600, must-revalidate" }
       ]
