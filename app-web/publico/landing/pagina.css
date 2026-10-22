@@ -1,0 +1,214 @@
+/* ==========================================================
+   AchaPost - landing page
+   Mobile-first. Cores e base vêm de ../../estilos/
+   ========================================================== */
+
+.secao-escura { background: #050505; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.container-estreito { max-width: 780px; }
+.nota { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 22px; }
+.breve { font-style: normal; font-size: 0.72rem; font-weight: 700; color: var(--primary); background: rgba(245,158,11,.12); border: 1px solid rgba(245,158,11,.3); padding: 2px 8px; border-radius: 999px; margin-left: 6px; white-space: nowrap; }
+
+/* ---------- 1. Topo ---------- */
+.topo { position: sticky; top: 0; z-index: 50; background: rgba(0,0,0,.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+.topo-interno { display: flex; align-items: center; justify-content: space-between; height: 66px; gap: 12px; }
+
+.logo { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.2rem; }
+.logo-icone { width: 34px; height: 34px; border-radius: 10px; background: var(--gradiente-botao); color: #000; display: grid; place-items: center; font-weight: 900; }
+
+.menu { display: none; position: absolute; top: 66px; left: 0; right: 0; flex-direction: column; gap: 4px; padding: 16px 20px 24px; background: #050505; border-bottom: 1px solid var(--border); }
+.menu.aberto { display: flex; }
+.menu a:not(.botao) { padding: 12px 4px; color: var(--muted); font-weight: 600; border-bottom: 1px solid var(--border); }
+.menu a:not(.botao):hover { color: var(--text); }
+.menu-acoes-mobile { display: grid; gap: 10px; margin-top: 14px; }
+
+.topo-acoes { display: flex; align-items: center; gap: 10px; }
+.topo-entrar { display: none; min-height: 42px; padding: 0 20px; }
+.topo-cta { min-height: 42px; padding: 0 18px; font-size: 0.9rem; }
+
+.menu-botao { width: 42px; height: 42px; border: 1px solid var(--border); border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px; }
+.menu-botao span { width: 18px; height: 2px; background: var(--text); border-radius: 2px; transition: transform .2s, opacity .2s; }
+.menu-botao[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.menu-botao[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.menu-botao[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ---------- 2. Hero ---------- */
+.hero { padding: 48px 0 56px; background: radial-gradient(ellipse at 50% -10%, rgba(245,158,11,.16), transparent 60%); }
+.hero-grade { display: grid; gap: 40px; align-items: center; }
+.hero-sub { color: var(--muted); font-size: 1.05rem; margin-top: 18px; max-width: 560px; }
+.hero-botoes { display: grid; gap: 12px; margin-top: 28px; }
+.selos { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 22px; color: var(--muted); font-size: 0.88rem; }
+.selos li::before { content: "✓"; color: var(--success); font-weight: 800; margin-right: 6px; }
+
+/* Mockup de conversa */
+.zap { background: var(--card); border: 1px solid var(--border); border-radius: 22px; overflow: hidden; box-shadow: var(--brilho); max-width: 440px; margin: 0 auto; }
+.zap-cabeca { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: #111; border-bottom: 1px solid var(--border); }
+.zap-cabeca small { display: block; color: var(--muted); font-size: 0.76rem; }
+.zap-cabeca-destino { border-top: 1px solid var(--border); margin-top: 14px; border-radius: 12px 12px 0 0; }
+.zap-avatar { width: 38px; height: 38px; border-radius: 50%; background: #262626; display: grid; place-items: center; font-weight: 800; flex-shrink: 0; }
+.zap-avatar-destino { background: var(--gradiente-botao); color: #000; }
+.zap-corpo { padding: 16px; display: grid; gap: 10px; }
+.balao { padding: 12px 14px; border-radius: 14px; font-size: 0.92rem; max-width: 92%; word-break: break-word; }
+.balao-autor { display: block; font-size: 0.74rem; color: var(--highlight); font-weight: 700; margin-bottom: 4px; }
+.balao-recebido { background: #1b1b1b; border-top-left-radius: 4px; }
+.balao-enviado { background: #14301f; border: 1px solid rgba(34,197,94,.25); border-top-right-radius: 4px; justify-self: end; }
+.balao-hora { display: block; text-align: right; font-size: 0.72rem; color: var(--success); margin-top: 6px; }
+.link-ruim { color: var(--muted); font-size: 0.82rem; }
+.link-ruim b { color: var(--danger); font-weight: 600; }
+.link-bom { color: var(--text); font-size: 0.82rem; }
+.link-bom b { color: var(--success); font-weight: 700; }
+.zap-etapa { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; font-size: 0.8rem; color: var(--muted); padding: 4px 2px; }
+.zap-etapa .ponto { width: 8px; height: 8px; border-radius: 50%; background: var(--primary); animation: pulsar 1.6s infinite; }
+.zap-etapa .seta { color: var(--primary); font-weight: 700; }
+@keyframes pulsar { 0%,100% { opacity: 1; } 50% { opacity: .3; } }
+
+/* ---------- 3. Números ---------- */
+.numeros { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: #050505; padding: 36px 0; }
+.numeros-grade { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; text-align: center; }
+.numero { min-width: 0; }
+.numero strong { display: block; font-size: clamp(1rem, 4.6vw, 1.5rem); font-weight: 800; overflow-wrap: anywhere; background: var(--gradiente-titulo); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.numero span { display: block; color: var(--muted); font-size: 0.84rem; margin-top: 4px; }
+
+/* ---------- 4. Lojas ---------- */
+.lojas { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.lojas li { background: var(--card); border: 1px solid var(--border); border-radius: 999px; padding: 12px 24px; font-weight: 700; }
+.lojas .loja-breve { color: var(--primary); border-style: dashed; }
+
+/* ---------- 5. Como funciona ---------- */
+.passos { display: grid; gap: 18px; }
+.passo-num { display: inline-block; font-size: 0.85rem; font-weight: 800; color: var(--primary); margin-bottom: 12px; }
+.passo h3 { margin-bottom: 10px; }
+.passo p { color: var(--muted); font-size: 0.95rem; }
+.passo-exemplo { margin-top: 18px; padding: 14px; background: #000; border: 1px solid var(--border); border-radius: 12px; font-size: 0.82rem; color: var(--muted); line-height: 1.7; word-break: break-word; }
+.passo-exemplo .riscado { color: var(--danger); text-decoration: line-through; }
+.passo-exemplo .destaque { color: var(--success); font-weight: 700; }
+
+/* ---------- 6. Recursos ---------- */
+.recursos-grade { display: grid; gap: 18px; }
+.recurso h3 { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.recurso-icone { font-size: 1.25rem; }
+.recurso li { position: relative; padding: 7px 0 7px 22px; color: var(--muted); font-size: 0.94rem; border-top: 1px solid var(--border); }
+.recurso li:first-child { border-top: 0; }
+.recurso li::before { content: ""; position: absolute; left: 4px; top: 16px; width: 8px; height: 8px; border-radius: 50%; background: var(--primary); }
+
+.destaques { display: grid; gap: 16px; margin-top: 28px; }
+.destaque-item { padding: 22px; border-radius: 18px; border: 1px solid rgba(245,158,11,.3); background: linear-gradient(180deg, rgba(245,158,11,.08), transparent); }
+.destaque-item h3 { color: var(--highlight); margin-bottom: 8px; }
+.destaque-item p { color: var(--muted); font-size: 0.94rem; }
+
+/* ---------- 7. Métricas (mockup) ---------- */
+.painel-mock { background: var(--card); border: 1px solid var(--border); border-radius: 22px; padding: 18px; box-shadow: var(--brilho); }
+.mock-resumo { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.mock-card { background: #000; border: 1px solid var(--border); border-radius: 14px; padding: 14px; }
+.mock-card small { color: var(--muted); font-size: 0.76rem; }
+.mock-card strong { display: block; font-size: 1.2rem; margin-top: 4px; color: var(--highlight); }
+.mock-tabela { margin-top: 16px; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.mock-linha { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 8px; padding: 12px 14px; font-size: 0.86rem; border-top: 1px solid var(--border); }
+.mock-linha:first-child { border-top: 0; }
+.mock-cab { background: #111; color: var(--muted); font-weight: 700; font-size: 0.78rem; }
+.mock-aviso { margin-top: 14px; font-size: 0.8rem; color: var(--muted); text-align: center; }
+
+/* ---------- 8. Aulas e suporte ---------- */
+.apoio-grade { display: grid; gap: 16px; }
+.apoio h3 { margin-bottom: 8px; color: var(--highlight); }
+.apoio p { color: var(--muted); font-size: 0.94rem; }
+
+/* ---------- 9. Aplicativo ---------- */
+.app-grade { display: grid; gap: 28px; align-items: center; }
+.app-texto { margin-top: 14px; }
+.app-lista { display: grid; gap: 12px; }
+.app-lista li { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 18px 20px; background: var(--card); border: 1px solid var(--border); border-radius: 14px; }
+.app-lista li span { color: var(--success); font-weight: 700; font-size: 0.9rem; }
+.app-lista li span.breve { color: var(--primary); }
+
+/* ---------- 10. Planos ---------- */
+.alternancia { display: flex; width: fit-content; margin: 0 auto 32px; padding: 5px; background: var(--card); border: 1px solid var(--border); border-radius: 999px; }
+.alt-botao { min-height: 44px; padding: 0 22px; border-radius: 999px; font-weight: 700; color: var(--muted); transition: background .2s, color .2s; }
+.alt-botao small { display: block; font-size: 0.66rem; font-weight: 600; line-height: 1; margin-top: 2px; }
+.alt-botao.ativo { background: var(--gradiente-botao); color: #000; }
+
+.planos-grade { display: grid; gap: 18px; }
+.plano { display: flex; flex-direction: column; position: relative; }
+.plano h3 { font-size: 1.3rem; }
+.plano-desc { color: var(--muted); font-size: 0.9rem; margin: 6px 0 16px; min-height: 2.6em; }
+.plano-preco { margin-bottom: 18px; }
+.plano-preco strong { font-size: 2rem; font-weight: 800; }
+.plano-preco small { color: var(--muted); margin-left: 4px; }
+.plano-lista { flex: 1; margin-bottom: 22px; }
+.plano-lista li { position: relative; padding: 8px 0 8px 26px; font-size: 0.92rem; border-top: 1px solid var(--border); }
+.plano-lista li::before { content: "✓"; position: absolute; left: 4px; color: var(--success); font-weight: 800; }
+.plano-destaque { border-color: var(--primary); box-shadow: var(--brilho); background: linear-gradient(180deg, rgba(245,158,11,.07), var(--card) 40%); }
+.plano-selo { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--gradiente-botao); color: #000; font-size: 0.74rem; font-weight: 800; padding: 5px 14px; border-radius: 999px; white-space: nowrap; }
+
+.comparativo { margin-top: 56px; }
+.comparativo h3 { text-align: center; margin-bottom: 20px; font-size: 1.4rem; }
+.tabela-rolagem { overflow-x: auto; border: 1px solid var(--border); border-radius: 16px; -webkit-overflow-scrolling: touch; }
+.tabela-rolagem table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 0.9rem; }
+.tabela-rolagem th, .tabela-rolagem td { padding: 13px 14px; text-align: center; border-top: 1px solid var(--border); }
+.tabela-rolagem th:first-child, .tabela-rolagem td:first-child { text-align: left; color: var(--muted); position: sticky; left: 0; background: var(--card); }
+.tabela-rolagem thead th { background: #111; border-top: 0; font-size: 0.82rem; }
+.tabela-rolagem tbody tr:nth-child(even) td { background: #080808; }
+.tabela-rolagem tbody tr:nth-child(even) td:first-child { background: #080808; }
+
+/* ---------- 11. Garantia ---------- */
+.garantia-grade { display: grid; gap: 16px; }
+.garantia h3 { color: var(--success); margin-bottom: 8px; }
+.garantia p { color: var(--muted); font-size: 0.94rem; }
+
+/* ---------- 12. Depoimentos ---------- */
+.depo-grade { display: grid; gap: 16px; }
+.depo blockquote { color: var(--muted); font-style: italic; margin-bottom: 18px; }
+.depo figcaption strong { display: block; }
+.depo figcaption small { color: var(--muted); }
+
+/* ---------- 13. FAQ ---------- */
+.faq { display: grid; gap: 12px; }
+.faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.faq-pergunta { width: 100%; text-align: left; padding: 18px 52px 18px 20px; font-weight: 700; position: relative; min-height: 56px; }
+.faq-pergunta::after { content: "+"; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 1.5rem; color: var(--primary); transition: transform .25s; }
+.faq-pergunta[aria-expanded="true"]::after { transform: translateY(-50%) rotate(45deg); }
+.faq-resposta { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+.faq-resposta p { padding: 0 20px 20px; color: var(--muted); font-size: 0.96rem; }
+
+/* ---------- 14. CTA final e rodapé ---------- */
+.cta-final { text-align: center; padding: 84px 0; background: radial-gradient(ellipse at 50% 100%, rgba(245,158,11,.18), transparent 65%); }
+.cta-final p { color: var(--muted); margin: 14px 0 28px; }
+
+.rodape { border-top: 1px solid var(--border); padding: 48px 0 24px; background: #030303; }
+.rodape-grade { display: grid; gap: 32px; }
+.rodape-marca p { margin-top: 12px; max-width: 320px; font-size: 0.92rem; }
+.rodape nav { display: grid; gap: 10px; align-content: start; }
+.rodape h4 { font-size: 0.82rem; letter-spacing: .06em; text-transform: uppercase; color: var(--text); margin-bottom: 4px; }
+.rodape nav a { color: var(--muted); font-size: 0.92rem; }
+.rodape nav a:hover { color: var(--primary); }
+.rodape-base { margin-top: 36px; padding-top: 20px; border-top: 1px solid var(--border); display: grid; gap: 6px; color: var(--muted); font-size: 0.82rem; }
+
+/* ==========================================================
+   Telas maiores
+   ========================================================== */
+@media (min-width: 640px) {
+  .hero-botoes { grid-template-columns: auto auto; justify-content: start; }
+  .numeros-grade { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .recursos-grade { grid-template-columns: repeat(2, 1fr); }
+  .apoio-grade { grid-template-columns: repeat(2, 1fr); }
+  .depo-grade { grid-template-columns: repeat(2, 1fr); }
+  .planos-grade { grid-template-columns: repeat(2, 1fr); }
+  .rodape-grade { grid-template-columns: 1.6fr 1fr 1fr 1fr; }
+  .topo-entrar { display: inline-flex; }
+}
+
+@media (min-width: 900px) {
+  .menu { display: flex; position: static; flex-direction: row; gap: 26px; padding: 0; background: none; border: 0; }
+  .menu a:not(.botao) { padding: 0; border: 0; font-size: 0.94rem; }
+  .menu-acoes-mobile, .menu-botao { display: none; }
+  .hero { padding: 80px 0 90px; }
+  .hero-grade { grid-template-columns: 1.1fr .9fr; }
+  .passos { grid-template-columns: repeat(3, 1fr); }
+  .recursos-grade { grid-template-columns: repeat(3, 1fr); }
+  .destaques { grid-template-columns: repeat(3, 1fr); }
+  .apoio-grade { grid-template-columns: repeat(4, 1fr); }
+  .garantia-grade { grid-template-columns: repeat(3, 1fr); }
+  .depo-grade { grid-template-columns: repeat(3, 1fr); }
+  .planos-grade { grid-template-columns: repeat(4, 1fr); }
+  .app-grade { grid-template-columns: 1.2fr 1fr; }
+  .rodape-base { grid-template-columns: 1fr auto; }
+}

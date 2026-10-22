@@ -1,0 +1,22 @@
+/* ==========================================================
+   AchaPost - cores (tema escuro, preto e laranja)
+   Valores aproximados da paleta do Umbra Copywriter.
+   Para a cópia fiel, inspecione o site e ajuste aqui.
+   ========================================================== */
+:root {
+  --bg: #000000;
+  --card: #0d0d0d;
+  --card-2: #141414;
+  --border: #1f1f1f;
+  --primary: #f59e0b;
+  --accent: #f97316;
+  --highlight: #fcd34d;
+  --text: #ffffff;
+  --muted: #9ca3af;
+  --success: #22c55e;
+  --danger: #ef4444;
+
+  --gradiente-titulo: linear-gradient(90deg, #fcd34d 0%, #f97316 100%);
+  --gradiente-botao: linear-gradient(180deg, #f59e0b 0%, #f97316 100%);
+  --brilho: 0 0 60px rgba(245, 158, 11, 0.18);
+}

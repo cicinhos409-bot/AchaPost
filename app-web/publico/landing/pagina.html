@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AchaPost | Automação de ofertas para afiliados no WhatsApp e Telegram</title>
+  <meta name="description" content="O AchaPost espelha ofertas, converte o link para o seu código de afiliado e posta sozinho nos seus grupos de achadinhos do WhatsApp e Telegram.">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Estilos globais (caminhos relativos a app-web/publico/landing/) -->
+  <link rel="stylesheet" href="../../estilos/cores.css">
+  <link rel="stylesheet" href="../../estilos/tipografia.css">
+  <link rel="stylesheet" href="../../estilos/global.css">
+  <link rel="stylesheet" href="pagina.css">
+</head>
+<body>
+
+  <!-- ======================================================
+       1. TOPO
+       ====================================================== -->
+  <header class="topo" id="topo">
+    <div class="container topo-interno">
+      <a href="/" class="logo" aria-label="AchaPost, página inicial">
+        <span class="logo-icone" aria-hidden="true">A</span>
+        <span class="logo-texto">Acha<span class="texto-gradiente">Post</span></span>
+      </a>
+
+      <nav class="menu" id="menu" aria-label="Menu principal">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#metricas">Métricas</a>
+        <a href="#planos">Planos</a>
+        <a href="#faq">FAQ</a>
+        <div class="menu-acoes-mobile">
+          <a href="/login" class="botao botao-secundario botao-bloco">Entrar</a>
+          <a href="/cadastro" class="botao botao-primario botao-bloco">Começar grátis</a>
+        </div>
+      </nav>
+
+      <div class="topo-acoes">
+        <a href="/login" class="botao botao-secundario topo-entrar">Entrar</a>
+        <a href="/cadastro" class="botao botao-primario topo-cta">Começar grátis</a>
+        <button class="menu-botao" id="menu-botao" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ======================================================
+         2. HERO
+         ====================================================== -->
+    <section class="hero">
+      <div class="container hero-grade">
+        <div class="hero-texto revelar">
+          <span class="etiqueta">Para afiliados · WhatsApp e Telegram</span>
+          <h1>Divulgue ofertas nos seus grupos <span class="texto-gradiente">no piloto automático.</span></h1>
+          <p class="hero-sub">O AchaPost espelha ofertas, troca o link pelo seu código de afiliado e posta sozinho nos seus grupos de achadinhos, no ritmo que você definir.</p>
+
+          <div class="hero-botoes">
+            <a href="/cadastro" class="botao botao-primario">Começar grátis</a>
+            <a href="#como-funciona" class="botao botao-secundario">Ver como funciona</a>
+          </div>
+
+          <ul class="selos">
+            <li>Sem cartão para testar</li>
+            <li>Cancele quando quiser</li>
+            <li>Garantia de 7 dias</li>
+          </ul>
+        </div>
+
+        <!-- Mockup: link de outra pessoa vira o link do afiliado (exemplo ilustrativo) -->
+        <div class="hero-mockup revelar" aria-label="Exemplo ilustrativo de conversa">
+          <div class="zap">
+            <div class="zap-cabeca">
+              <span class="zap-avatar">O</span>
+              <div>
+                <strong>Grupo de origem</strong>
+                <small>exemplo ilustrativo</small>
+              </div>
+            </div>
+            <div class="zap-corpo">
+              <div class="balao balao-recebido">
+                <span class="balao-autor">Admin da origem</span>
+                Promo relâmpago! 🔥<br>
+                <span class="mono link-ruim">loja.com/produto?aff=<b>outra-pessoa</b></span>
+              </div>
+
+              <div class="zap-etapa">
+                <span class="ponto"></span> robô detectou o link
+                <span class="seta">↓ converte e reposta</span>
+              </div>
+
+              <div class="zap-cabeca zap-cabeca-destino">
+                <span class="zap-avatar zap-avatar-destino">S</span>
+                <div>
+                  <strong>Seu grupo de achadinhos</strong>
+                  <small>postado pelo robô</small>
+                </div>
+              </div>
+              <div class="balao balao-enviado">
+                ✨ Achadinho do dia<br>
+                Nome do produto · [PREÇO]<br>
+                <span class="mono link-bom">loja.com/produto?aff=<b>seu-codigo</b></span>
+                <span class="balao-hora">comissão é sua ✓✓</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         3. NÚMEROS
+         ====================================================== -->
+    <section class="numeros">
+      <div class="container numeros-grade revelar">
+        <div class="numero">
+          <strong>[PLACEHOLDER]</strong>
+          <span>afiliados ativos</span>
+        </div>
+        <div class="numero">
+          <strong>[PLACEHOLDER]</strong>
+          <span>envios por mês</span>
+        </div>
+        <div class="numero">
+          <strong>[PLACEHOLDER]</strong>
+          <span>tempo médio de resposta</span>
+        </div>
+        <div class="numero">
+          <strong>24h</strong>
+          <span>rodando no servidor, sem deixar o celular ligado</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         4. PLATAFORMAS SUPORTADAS
+         ====================================================== -->
+    <section class="secao" id="plataformas">
+      <div class="container">
+        <div class="secao-titulo revelar">
+          <span class="etiqueta">Lojas</span>
+          <h2>Funciona com as lojas que você <span class="texto-gradiente">já divulga</span></h2>
+          <p>Seu código de afiliado aplicado automaticamente nos links.</p>
+        </div>
+        <ul class="lojas revelar">
+          <li>Shopee</li>
+          <li>Mercado Livre</li>
+          <li>Amazon</li>
+          <li>Magalu</li>
+          <li>SHEIN</li>
+          <li>AliExpress</li>
+          <li>TikTok Shop</li>
+          <li class="loja-breve">Novas em breve</li>
+        </ul>
+        <p class="nota revelar">No TikTok Shop, você cola o seu link de afiliado e o AchaPost monta a oferta. A disponibilidade de cada loja pode variar por plano.</p>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         5. COMO FUNCIONA
+         ====================================================== -->
+    <section class="secao secao-escura" id="como-funciona">
+      <div class="container">
+        <div class="secao-titulo revelar">
+          <span class="etiqueta">Como funciona</span>
+          <h2>Três passos. <span class="texto-gradiente">Zero esforço diário.</span></h2>
+          <p>Você configura uma vez e acompanha pelo painel.</p>
+        </div>
+
+        <div class="passos">
+          <article class="passo card revelar">
+            <span class="passo-num">01</span>
+            <h3>Conecte suas contas</h3>
+            <p>Conecte o WhatsApp por QR Code (ou código de pareamento) e o Telegram por bot, canais e grupos.</p>
+            <div class="passo-exemplo mono">
+              ✓ WhatsApp conectado<br>
+              ✓ Bot do Telegram ativo<br>
+              ✓ Grupos e canais escolhidos
+            </div>
+          </article>
+
+          <article class="passo card revelar">
+            <span class="passo-num">02</span>
+            <h3>O robô detecta e converte</h3>
+            <p>Ele encontra o link da oferta e troca pelo seu código de afiliado. Se a conversão falhar, a oferta não é publicada.</p>
+            <div class="passo-exemplo mono">
+              ...?aff=<span class="riscado">outra-pessoa</span><br>
+              ↓ convertendo<br>
+              ...?aff=<span class="destaque">seu-codigo</span>
+            </div>
+          </article>
+
+          <article class="passo card revelar">
+            <span class="passo-num">03</span>
+            <h3>Posta no seu grupo</h3>
+            <p>A oferta sai com o seu template, no ritmo que você definir, com intervalo entre envios e horário de descanso.</p>
+            <div class="passo-exemplo mono">
+              ✨ Achadinho do dia<br>
+              [PRODUTO] · [PREÇO]<br>
+              seu link de afiliado
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         6. RECURSOS (mesmas categorias do menu do painel)
+         ====================================================== -->
+    <section class="secao" id="recursos">
+      <div class="container">
+        <div class="secao-titulo revelar">
+          <span class="etiqueta">Recursos</span>
+          <h2>Toda a operação de afiliado <span class="texto-gradiente">em um só lugar</span></h2>
+          <p>As mesmas categorias que você encontra no painel.</p>
+        </div>
+
+        <div class="recursos-grade">
+
+          <article class="card recurso revelar">
+            <h3><span class="recurso-icone">🔌</span> Conexões</h3>
+            <ul>
+              <li>WhatsApp por QR Code ou código de pareamento</li>
+              <li>Telegram: bot, canais e grupos</li>
+              <li>Credenciais de afiliado por loja</li>
+              <li>Várias contas de WhatsApp, com reserva</li>
+            </ul>
+          </article>
+
+          <article class="card recurso revelar">
+            <h3><span class="recurso-icone">📣</span> Divulgar</h3>
+            <ul>
+              <li>Criar oferta a partir de um link</li>
+              <li>Mensagem livre e envio rápido</li>
+              <li>Modo fila e modo lista</li>
+              <li>Modo copiador e espelhamento</li>
+              <li>Ofertas automáticas e agendamento</li>
+              <li>Curador IA</li>
+              <li>Intervalo entre envios</li>
+              <li>Instagram Auto <em class="breve">em breve</em></li>
+            </ul>
+          </article>
+
+          <article class="card recurso revelar">
+            <h3><span class="recurso-icone">🔎</span> Encontrar ofertas</h3>
+            <ul>
+              <li>Produtos e últimas promoções</li>
+              <li>Cupons promocionais</li>
+              <li>Monitor de grupos</li>
+              <li>Extensão para o navegador</li>
+              <li>Migração de produtos</li>
+            </ul>
+          </article>
+
+          <article class="card recurso revelar">
+            <h3><span class="recurso-icone">🧰</span> Minha operação</h3>
+            <ul>
+              <li>Templates de mensagem com variáveis</li>
+              <li>Meus cupons dentro da oferta</li>
+              <li>Minha loja</li>
+              <li>Imagens de fundo e marca d'água</li>
+              <li>Minhas afiliações</li>
+            </ul>
+          </article>
+
+          <article class="card recurso revelar">
+            <h3><span class="recurso-icone">📈</span> Grupos e crescimento</h3>
+            <ul>
+              <li>Link inteligente e rotacionador</li>
+              <li>Bio link e página ponte</li>
+              <li>Analytics de grupos</li>
+              <li>Indique e ganhe</li>
+            </ul>
+          </article>
+
+          <article class="card recurso revelar">
+            <h3><span class="recurso-icone">📊</span> Métricas</h3>
+            <ul>
+              <li>Vendas e comissão</li>
+              <li>Histórico de envios</li>
+              <li>Relatórios de cliques</li>
+              <li>WhatsApp monitor</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Destaques de proteção -->
+        <div class="destaques">
+          <article class="destaque-item revelar">
+            <h3>Várias contas, com reserva</h3>
+            <p>Conecte mais de um número e divida os envios entre eles. Um número reserva pode assumir se o principal cair.</p>
+          </article>
+          <article class="destaque-item revelar">
+            <h3>Proteção anti-bloqueio</h3>
+            <p>Intervalo entre envios, horário de descanso e limite por hora e por dia. Isso reduz o risco, mas nenhum software garante que um número não será bloqueado.</p>
+          </article>
+          <article class="destaque-item revelar">
+            <h3>Trava de conversão</h3>
+            <p>Se a troca do link falhar, a oferta não é publicada. O link de outra pessoa nunca chega ao seu grupo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         7. MÉTRICAS (mockup com dados fictícios)
+         ====================================================== -->
+    <section class="secao secao-escura" id="metricas">
+      <div class="container">
+        <div class="secao-titulo revelar">
+          <span class="etiqueta">Métricas</span>
+          <h2>Veja o que vendeu, <span class="texto-gradiente">não só o que saiu</span></h2>
+          <p>Vendas, comissão, pedidos e cliques por grupo e por loja, no próprio painel.</p>
+        </div>
+
+        <div class="painel-mock revelar" role="img" aria-label="Exemplo ilustrativo de dashboard com dados fictícios">
+          <div class="mock-resumo">
+            <div class="mock-card"><small>Comissão</small><strong>R$ 0.000,00</strong></div>
+            <div class="mock-card"><small>Pedidos</small><strong>000</strong></div>
+            <div class="mock-card"><small>Cliques</small><strong>0.000</strong></div>
+            <div class="mock-card"><small>Ofertas enviadas</small><strong>000</strong></div>
+          </div>
+
+          <div class="mock-tabela">
+            <div class="mock-linha mock-cab">
+              <span>Grupo</span><span>Loja A</span><span>Loja B</span><span>Total</span>
+            </div>
+            <div class="mock-linha"><span>Grupo exemplo 1</span><span>00</span><span>00</span><span>00</span></div>
+            <div class="mock-linha"><span>Grupo exemplo 2</span><span>00</span><span>00</span><span>00</span></div>
+            <div class="mock-linha"><span>Grupo exemplo 3</span><span>00</span><span>00</span><span>00</span></div>
+          </div>
+          <p class="mock-aviso">Exemplo ilustrativo com dados fictícios. Não são resultados de clientes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         8. AULAS E SUPORTE
+         ====================================================== -->
+    <section class="secao" id="aulas">
+      <div class="container">
+        <div class="secao-titulo revelar">
+          <span class="etiqueta">Aprenda e tenha apoio</span>
+          <h2>Você não fica <span class="texto-gradiente">sozinho</span></h2>
+        </div>
+        <div class="apoio-grade">
+          <article class="card apoio revelar"><h3>Aulas</h3><p>Aprenda a encher e organizar grupos de achadinhos.</p></article>
+          <article class="card apoio revelar"><h3>Tutoriais em vídeo</h3><p>Passo a passo para conectar contas e configurar o robô.</p></article>
+          <article class="card apoio revelar"><h3>Central de ajuda e FAQ</h3><p>Respostas rápidas para as dúvidas mais comuns.</p></article>
+          <article class="card apoio revelar"><h3>Suporte por WhatsApp</h3><p>Atendimento humano. Horário: [PLACEHOLDER].</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         9. APLICATIVO
+         ====================================================== -->
+    <section class="secao secao-escura" id="aplicativo">
+      <div class="container app-grade">
+        <div class="revelar">
+          <span class="etiqueta">Acesso</span>
+          <h2>Use no celular, tablet ou <span class="texto-gradiente">computador</span></h2>
+          <p class="texto-suave app-texto">O AchaPost abre direto no navegador, sem instalar nada. O aplicativo Android está em desenvolvimento.</p>
+        </div>
+        <ul class="app-lista revelar">
+          <li><strong>Navegador</strong><span>Disponível</span></li>
+          <li><strong>Aplicativo Android</strong><span class="breve">Em breve</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         10. PLANOS
+         ====================================================== -->
+    <section class="secao" id="planos">
+      <div class="container">
+        <div class="secao-titulo revelar">
+          <span class="etiqueta">Planos</span>
+          <h2>Comece grátis. <span class="texto-gradiente">Cresça no seu ritmo.</span></h2>
+          <p>Teste 7 dias com o plano Pro, sem cartão. Depois escolha o que faz sentido para a sua operação.</p>
+        </div>
+
+        <!-- Alternância Mensal / Anual -->
+        <div class="alternancia revelar" role="group" aria-label="Período de cobrança">
+          <button class="alt-botao ativo" data-periodo="mensal" aria-pressed="true">Mensal</button>
+          <button class="alt-botao" data-periodo="anual" aria-pressed="false">Anual <small>2 meses grátis</small></button>
+        </div>
+
+        <div class="planos-grade">
+
+          <article class="plano card revelar">
+            <h3>Gratuito</h3>
+            <p class="plano-desc">Para conhecer a plataforma.</p>
+            <p class="plano-preco"><strong data-mensal="R$ 0" data-anual="R$ 0">R$ 0</strong></p>
+            <ul class="plano-lista">
+              <li>1 conta e 1 número de WhatsApp</li>
+              <li>Somente Shopee</li>
+              <li>Até 3 grupos de WhatsApp</li>
+              <li>10 ofertas por dia</li>
+              <li>Criar oferta e envio imediato</li>
+            </ul>
+            <a href="/cadastro" class="botao botao-secundario botao-bloco">Começar grátis</a>
+          </article>
+
+          <article class="plano card revelar">
+            <h3>Básico</h3>
+            <p class="plano-desc">Conversão, criação de ofertas e agendamento.</p>
+            <p class="plano-preco">
+              <strong data-mensal="R$ 39,90" data-anual="R$ 399,00">R$ 39,90</strong>
+              <small class="periodo-texto">/mês</small>
+            </p>
+            <ul class="plano-lista">
+              <li>1 conta e 1 número de WhatsApp</li>
+              <li>Shopee, Mercado Livre e Amazon</li>
+              <li>10 grupos de WhatsApp e 5 de Telegram</li>
+              <li>Agendamento, 1 fila e 1 lista</li>
+              <li>Templates de mensagem</li>
+              <li>Histórico de envios (30 dias)</li>
+            </ul>
+            <a href="/cadastro" class="botao botao-secundario botao-bloco">Assinar Básico</a>
+          </article>
+
+          <article class="plano plano-destaque card revelar">
+            <span class="plano-selo">Mais popular</span>
+            <h3>Pro</h3>
+            <p class="plano-desc">Filas, listas, copiador, relatórios e monitor de grupos.</p>
+            <p class="plano-preco">
+              <strong data-mensal="R$ 79,90" data-anual="R$ 799,00">R$ 79,90</strong>
+              <small class="periodo-texto">/mês</small>
+            </p>
+            <ul class="plano-lista">
+              <li>2 contas e 2 números de WhatsApp</li>
+              <li>Todas as lojas</li>
+              <li>25 grupos de WhatsApp e 25 de Telegram</li>
+              <li>3 filas, 3 listas e 2 espelhamentos</li>
+              <li>Modo copiador e ofertas automáticas</li>
+              <li>Monitor de grupos e link inteligente</li>
+              <li>Vendas, comissão e relatórios</li>
+            </ul>
+            <a href="/cadastro" class="botao botao-primario botao-bloco">Assinar Pro</a>
+          </article>
+
+          <article class="plano card revelar">
+            <h3>Premium</h3>
+            <p class="plano-desc">Mais números, mais grupos e suporte prioritário.</p>
+            <p class="plano-preco">
+              <strong data-mensal="R$ 149,90" data-anual="R$ 1.499,00">R$ 149,90</strong>
+              <small class="periodo-texto">/mês</small>
+            </p>
+            <ul class="plano-lista">
+              <li>5 contas e 5 números de WhatsApp</li>
+              <li>60 grupos de WhatsApp e 60 de Telegram</li>
+              <li>10 filas, 10 listas e 5 espelhamentos</li>
+              <li>Copiador de até 5 origens</li>
+              <li>Randomização dos envios</li>
+              <li>Aulas completas e suporte prioritário</li>
+            </ul>
+            <a href="/cadastro" class="botao botao-secundario botao-bloco">Assinar Premium</a>
+          </article>
+        </div>
+
+        <p class="nota revelar">Valores propostos e sujeitos a ajuste antes do lançamento. Conta ou pacote de grupos extras podem ser contratados à parte: [PLACEHOLDER].</p>
+
+        <!-- Tabela comparativa -->
+        <div class="comparativo revelar">
+          <h3>Compare os planos</h3>
+          <div class="tabela-rolagem">
+            <table>
+              <thead>
+                <tr><th>Recurso</th><th>Gratuito</th><th>Básico</th><th>Pro</th><th>Premium</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Contas / números de WhatsApp</td><td>1</td><td>1</td><td>2</td><td>5</td></tr>
+                <tr><td>Grupos de WhatsApp</td><td>3</td><td>10</td><td>25</td><td>60</td></tr>
+                <tr><td>Grupos de Telegram</td><td>—</td><td>5</td><td>25</td><td>60</td></tr>
+                <tr><td>Lojas</td><td>Shopee</td><td>3 lojas</td><td>Todas</td><td>Todas</td></tr>
+                <tr><td>Agendamento</td><td>—</td><td>Sim</td><td>Sim</td><td>Sim</td></tr>
+                <tr><td>Filas / listas</td><td>—</td><td>1 / 1</td><td>3 / 3</td><td>10 / 10</td></tr>
+                <tr><td>Espelhamentos</td><td>—</td><td>—</td><td>2</td><td>5</td></tr>
+                <tr><td>Modo copiador (origens)</td><td>—</td><td>—</td><td>1</td><td>5</td></tr>
+                <tr><td>Ofertas automáticas</td><td>—</td><td>—</td><td>Sim</td><td>Sim</td></tr>
+                <tr><td>Monitor de grupos</td><td>—</td><td>—</td><td>5</td><td>Ilimitado</td></tr>
+                <tr><td>Link inteligente</td><td>—</td><td>—</td><td>Sim</td><td>Sim</td></tr>
+                <tr><td>Vendas e comissão</td><td>—</td><td>—</td><td>Sim</td><td>Sim</td></tr>
+                <tr><td>Randomização dos envios</td><td>—</td><td>—</td><td>—</td><td>Sim</td></tr>
+                <tr><td>Aulas completas</td><td>—</td><td>—</td><td>—</td><td>Sim</td></tr>
+                <tr><td>Suporte</td><td>Ajuda</td><td>Padrão</td><td>Padrão</td><td>Prioritário</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         11. GARANTIA
+         ====================================================== -->
+    <section class="secao secao-escura" id="garantia">
+      <div class="container">
+        <div class="secao-titulo revelar">
+          <span class="etiqueta">Garantia</span>
+          <h2>Teste com calma. <span class="texto-gradiente">Fique porque funciona.</span></h2>
+        </div>
+        <div class="garantia-grade">
+          <article class="card garantia revelar"><h3>7 dias de garantia</h3><p>Depois do primeiro pagamento, você pode pedir a devolução. Regras completas na política de reembolso.</p></article>
+          <article class="card garantia revelar"><h3>Sem fidelidade e sem multa</h3><p>Cancele quando quiser, pelo próprio painel.</p></article>
+          <article class="card garantia revelar"><h3>Sem cartão para testar</h3><p>Os 7 dias de teste com o plano Pro não pedem cartão.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         12. DEPOIMENTOS (espaços reservados, sem texto inventado)
+         ====================================================== -->
+    <section class="secao" id="depoimentos">
+      <div class="container">
+        <div class="secao-titulo revelar">
+          <span class="etiqueta">Depoimentos</span>
+          <h2>Quem usa <span class="texto-gradiente">conta como foi</span></h2>
+          <p>Troque os espaços abaixo por depoimentos reais, com autorização de quem os escreveu.</p>
+        </div>
+        <div class="depo-grade">
+          <figure class="card depo revelar"><blockquote>[DEPOIMENTO]</blockquote><figcaption><strong>[NOME]</strong><small>[FUNÇÃO]</small></figcaption></figure>
+          <figure class="card depo revelar"><blockquote>[DEPOIMENTO]</blockquote><figcaption><strong>[NOME]</strong><small>[FUNÇÃO]</small></figcaption></figure>
+          <figure class="card depo revelar"><blockquote>[DEPOIMENTO]</blockquote><figcaption><strong>[NOME]</strong><small>[FUNÇÃO]</small></figcaption></figure>
+          <figure class="card depo revelar"><blockquote>[DEPOIMENTO]</blockquote><figcaption><strong>[NOME]</strong><small>[FUNÇÃO]</small></figcaption></figure>
+          <figure class="card depo revelar"><blockquote>[DEPOIMENTO]</blockquote><figcaption><strong>[NOME]</strong><small>[FUNÇÃO]</small></figcaption></figure>
+          <figure class="card depo revelar"><blockquote>[DEPOIMENTO]</blockquote><figcaption><strong>[NOME]</strong><small>[FUNÇÃO]</small></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         13. FAQ (acordeão)
+         ====================================================== -->
+    <section class="secao secao-escura" id="faq">
+      <div class="container container-estreito">
+        <div class="secao-titulo revelar">
+          <span class="etiqueta">FAQ</span>
+          <h2>Perguntas <span class="texto-gradiente">frequentes</span></h2>
+        </div>
+
+        <div class="faq revelar">
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">Serve para quem está começando?</button>
+            <div class="faq-resposta"><p>Sim. Você conecta o WhatsApp, escolhe os grupos e cola um link para criar a primeira oferta. Há tutoriais em vídeo e uma central de ajuda para cada etapa.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">Preciso ser afiliado?</button>
+            <div class="faq-resposta"><p>Para ganhar comissão, sim: o AchaPost aplica o seu código de afiliado nos links. Você precisa ter cadastro nos programas de afiliados das lojas em que quer divulgar.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">Quais lojas funcionam?</button>
+            <div class="faq-resposta"><p>Shopee, Mercado Livre, Amazon, Magalu, SHEIN, AliExpress e TikTok Shop. As lojas liberadas dependem do plano: o Gratuito é só Shopee e o Básico inclui Mercado Livre e Amazon.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">Funciona no WhatsApp e no Telegram?</button>
+            <div class="faq-resposta"><p>Sim. O WhatsApp está em todos os planos. O Telegram (bot, canais e grupos) está disponível a partir do plano Básico.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">Posso cancelar quando quiser?</button>
+            <div class="faq-resposta"><p>Sim, pelo próprio painel, sem fidelidade e sem multa. Veja a política de reembolso para os detalhes da garantia de 7 dias.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">Existe risco de bloqueio do número?</button>
+            <div class="faq-resposta"><p>Sempre existe algum risco ao automatizar mensagens. O AchaPost reduz esse risco com intervalo entre envios, horário de descanso e limites por hora e por dia, mas nenhum software garante que um número não será bloqueado. Recomendamos usar um número dedicado.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-pergunta" aria-expanded="false">Como conecto o WhatsApp?</button>
+            <div class="faq-resposta"><p>Pelo painel, escaneando um QR Code ou usando um código de pareamento com o número. A conexão roda no servidor, então o celular não precisa ficar ligado o tempo todo.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================
+         14. CTA FINAL
+         ====================================================== -->
+    <section class="cta-final">
+      <div class="container revelar">
+        <h2>Pare de copiar e colar. <span class="texto-gradiente">Deixe o robô postar.</span></h2>
+        <p>Comece com 7 dias do plano Pro, sem cartão.</p>
+        <a href="/cadastro" class="botao botao-primario">Começar grátis</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================================================
+       RODAPÉ
+       ====================================================== -->
+  <footer class="rodape">
+    <div class="container rodape-grade">
+      <div class="rodape-marca">
+        <a href="/" class="logo"><span class="logo-icone" aria-hidden="true">A</span><span class="logo-texto">Acha<span class="texto-gradiente">Post</span></span></a>
+        <p class="texto-suave">Automação de ofertas para afiliados no WhatsApp e Telegram.</p>
+      </div>
+
+      <nav aria-label="Produto">
+        <h4>Produto</h4>
+        <a href="#recursos">Recursos</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#planos">Planos</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <nav aria-label="Conta">
+        <h4>Conta</h4>
+        <a href="/login">Entrar</a>
+        <a href="/cadastro">Criar conta</a>
+      </nav>
+
+      <nav aria-label="Legal">
+        <h4>Legal</h4>
+        <a href="/termos">Termos de uso</a>
+        <a href="/privacidade">Privacidade</a>
+        <a href="/reembolso">Reembolso</a>
+      </nav>
+    </div>
+    <div class="container rodape-base">
+      <p>[RAZÃO SOCIAL] · CNPJ: [CNPJ] · E-mail: [E-MAIL]</p>
+      <p>© <span id="ano">2026</span> AchaPost. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="pagina.js"></script>
+</body>
+</html>
