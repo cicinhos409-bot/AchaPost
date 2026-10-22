@@ -1,0 +1,13 @@
+# Vercel
+.vercel
+
+# Dependências
+node_modules/
+
+# Segredos: nunca versionar chaves e senhas
+.env
+.env.*
+!.env.example
+
+# Sistema
+.DS_Store
